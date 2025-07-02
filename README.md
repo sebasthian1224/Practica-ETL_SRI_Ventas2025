@@ -1,57 +1,50 @@
-# Practica-ETL_SRI_Ventas2025
-PROYECTO :CONSTRUCCIÓN DE PROCESOS ETL CON APACHE AIRFLOW Y GOOGLE BIGQUERY
+# ETL de Ventas del SRI con Apache Airflow y BigQuery
 
-ETL Ventas SRI – Apache Airflow & BigQuery
-Este proyecto implementa un proceso ETL (Extracción, Transformación y Carga) utilizando Apache Airflow (mediante Cloud Composer en GCP) para integrar y analizar datos de ventas registrados por el Servicio de Rentas Internas (SRI) del Ecuador.
+Este repositorio contiene la solución completa para la implementación de un pipeline ETL (Extracción, Transformación y Carga) sobre los datos públicos de ventas del Servicio de Rentas Internas (SRI) del Ecuador. El flujo fue desarrollado utilizando Apache Airflow en Cloud Composer y los datos son almacenados y analizados en Google BigQuery.
 
- Descripción
-El flujo de trabajo orquestado por Airflow permite cargar un archivo .csv con datos de ventas por provincia, cantón, sector económico y mes, y transformarlos en un modelo dimensional en estrella en Google BigQuery, ideal para análisis OLAP.
+## 🗂 Estructura del Proyecto
 
-Estructura del Repositorio
-bash
-Copiar
-Editar
-sri-etl-ventas/
-├── dags/
-│   └── sri_ventas_etl_dag.py           # DAG principal de Airflow
-├── scripts/
-│   ├── __init__.py
-│   └── transformaciones.py             # Funciones auxiliares ETL
-├── README.md
- Modelo Dimensional
-El modelo estrella está compuesto por:
+- `dags/`: Contiene el DAG de Airflow (`etl_ventas_sri_dag.py`).
+- `scripts/`: Scripts Python auxiliares para transformación de datos.
+- `data/`: Carpeta para el CSV de entrada y otros recursos.
+- `README.md`: Este archivo.
 
-Fact_VentasSRI: ventas y compras agregadas por ubicación, sector y tiempo.
+## 📊 Dataset y Modelo Dimensional
 
-Dim_Tiempo: año y mes.
+El dataset utilizado corresponde a datos agregados del SRI sobre ventas, importaciones y exportaciones por sector, ubicación y tiempo. El modelo dimensional propuesto incluye:
 
-Dim_Ubicacion: provincia y cantón.
+### Tabla de Hechos: `Fact_VentasSRI`
+- Claves foráneas: `id_tiempo`, `id_ubicacion`, `id_sector`
+- Métricas: `ventas_tarifa_gravada`, `ventas_tarifa_0`, `exportaciones`, `total_ventas`, entre otras.
 
-Dim_Sector: código del sector económico.
+### Dimensiones
+- `Dim_Tiempo`: año, mes
+- `Dim_Ubicacion`: provincia, cantón
+- `Dim_Sector`: código del sector económico
 
- Tecnologías
-Apache Airflow (via Cloud Composer)
+## ☁️ Arquitectura en la Nube
 
-Google Cloud Storage (GCS)
+El pipeline fue implementado en GCP utilizando:
+- **Cloud Composer (Apache Airflow)** para orquestación
+- **BigQuery** como destino de datos
+- **Cloud Storage** para almacenamiento temporal
+- **IAM** con cuenta de servicio dedicada
 
-Google BigQuery
+## 🛠 DAG de Airflow
 
-Python (Pandas, Google Cloud Client Libraries)
+El DAG incluye tareas para:
+- Carga inicial del CSV fuente
+- Procesamiento y carga de dimensiones
+- Procesamiento y carga de la tabla de hechos
+- Validaciones de integridad referencial
 
-Requisitos
-Cuenta en Google Cloud Platform
+## ✅ Ejecución y Resultados
 
-Proyecto con Composer, BigQuery y Storage habilitados
+El DAG fue ejecutado exitosamente desde Cloud Composer y los datos fueron cargados a BigQuery con integridad garantizada. Se verificaron los registros cargados, los joins con dimensiones y las métricas numéricas.
 
-Archivo CSV: sri_ventas_2025.csv
+## 📌 Conclusiones
 
-Archivo de credenciales JSON con acceso a BigQuery y GCS
+- El modelo estrella permite análisis eficientes por tiempo, ubicación y sector económico.
+- Airflow en Cloud Composer facilitó la orquestación robusta del flujo ETL.
+- BigQuery permitió consultas rápidas sobre grandes volúmenes de datos.
 
- Ejecución del DAG
-Subir el archivo .csv al bucket de Cloud Storage en /data/sri_ventas_2025.csv.
-
-Cargar el DAG sri_ventas_etl_dag.py en el directorio /dags/ del entorno Composer.
-
-Lanzar manualmente el DAG desde la UI de Airflow.
-
-Verificar que las tablas Dim_Tiempo, Dim_Ubicacion, Dim_Sector y Fact_VentasSRI se generen en BigQuery sin errores.
