@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "etl-sri-ventas2025",
+  "private_key_id": "e4cd659d5d7a1a78c4090901857c621c816b8753",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEugIBADANBgkqhkiG9w0BAQEFAASCBKQwggSgAgEAAoIBAQDZSjmJm4meuroa\nF8neGSS7suSC+KrWpSDX1c8uet9Q7BRbYro9k9YcmANK4qwxORJDevDA0cFn4tNb\nfiI3RiFgSk5n1Vt3I19Ej5UVHK3BKrr55gKH/BYKMu9RAy+ieo5oGvESRBD2yy9x\nyAJDzZE4O1X3JiMzJRjGD+yMQBLj2llyMgVrv6az7D2bNZ6xnuI63qSDRpMqMw7j\nypOPmiVXH3VhRXoIxuXIj3gVJ2QmPRokFIbjLk4W4LCHoEodZC9Hf9rrYHo5PvEi\nut6Y0dV6tHWDmdPv4bxFzI68lTCtiYoWjowhafJlroKw4hqJe/kP+/a2bRHS8F2k\npu1ZKrx7AgMBAAECggEAVMm+2/BiahrI5cekkNLU3501x9mKqEk1IKOgva1amLQW\nWXaT39VhNjUnC8CZmnd/pe9CJKt0wbnj6Y61gUYPXgiAwcmicEHQOeuhK+TN9FNd\nNIhJMpDudLpdYgpROyCBkyP4L715tSOh9s8p+xUq9ntI1zD9iUaPfTHXhv61oEzq\nCKYEK07aNIP4hU9WPP243JgeA9Ng355NdoJYc0xmdRzcaOQ3uOY/khgqgrff1naE\n0ilYswKr7SXpPECiiDjoLfOqIDriauIpoNE3nM/Kio6icNs5SBQ7by3nuq15lWVh\nHxU12mdi6CpqcKaz4XVn7b+DHLRfvtllUEtc7B6gsQKBgQD+GiXEaClFqDy6gooR\n3ctjb+QNtXLNCE7hlkMJug45hv3pG+hNu7j9m/dDkuU7P9cwRfoWKap36etjqMpz\n77YIM8LTcnRujYYcytIbYnjRvFxxVA5goBzfHbxVd8VLELC/TTHJFaBvdika5j2b\nN9VWrQ3HMzB0wQz2lJ1FY/KC0wKBgQDa6bDjsT2HvibtfFtPW/17JVgpY6GdMwHy\nkqJd+0IBcNE87gP7m8SDy36pgNz1HKv5f003HD7TEGtzeDLG3RxlGAtkHHHFKKNP\nyKZRc7fpQxohj9HSwl1ennHgq2Xz2+daMXV1ZePJO/fwr260jbD9ypNH911IlBqt\n4/RXaHnGuQJ/P4ZJ6tAfgUqN5BK+cbkBH9rZKJQ0Hw30qnDmUYgyBi+5So2vhb9o\nf/590mbm5+kN4wObge7orxHLxx5rfpBu8Z3/Ft2GPh0jag9Kd44mpkhw0+Qvs/hT\nP3QvoS5QJHQHu8uQprTBZxwjKpZk0Gkk7IZW63Xgp0+b7gk5SB+0gQKBgH05as+E\nxs7MjlYRaeYmmASGozzh2kQjNnz9NlYOcX6De52gBbU7MJm3oVfy9/JamWGaWaAp\nzyJLZTvjSSCKwUBvFa0JvGbszSbJf6JeUJjloqAKNhuaxXBnsHq1cRei9l+YpTkn\ntLqbTERpBinQV6uF4uQq8zieR/iqyk3p3Kc5AoGANuNbg7+4kLm5UjYvHECmCUIv\n+P/BijwYaPYtHiQaTKZBKibZG0pLIX7PWmOQ6H9/iWfx1VTPrzYyMjCqvQco15OJ\nYtFgqZZOWxrUcxQwrqq9DCSpMqzAQqCnIZqxsSaHXgOOkQ/a+SYFp6S/hMkPwU2D\nwSKsSNBkEHNuvzBqeQs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "etl-service-account@etl-sri-ventas2025.iam.gserviceaccount.com",
+  "client_id": "111538013041335688882",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/etl-service-account%40etl-sri-ventas2025.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
